@@ -1,14 +1,15 @@
 #' Kody stacji wykorzystywane do pobierania danych
 #'
-#'@format Ramka danych zawiera:
+#' @format Ramka danych zawiera:
 #' \describe{
 #'  \item{KOD}{Unikatowy kod stacji}
-#'  \item{Nazwa stacji}{Nazwa danej stacji}
+#'  \item{Stacja}{Nazwa danej stacji}
 #' }
-#' @usage data(Kody)
+#'
+#' @usage data(kody)
 #'
 #' @examples
 #' \dontrun{
-#'  Kody
+#'  kody
 #' }
-"Kody"
+"kody"
