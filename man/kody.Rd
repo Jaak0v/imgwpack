@@ -7,8 +7,8 @@
 \format{
 Ramka danych zawiera:
 \describe{
-\item{Kod}{Unikatowy kod stacji}
-\item{Stacja}{Nazwa stacji, do które przypisany jest dany kod}
+\item{Kod}{numeric unikatowy kod stacji}
+\item{Stacja}{character, nazwa stacji, do które przypisany jest dany kod}
 }
 }
 \source{
@@ -16,7 +16,7 @@ Instytut Meteorologii i Gospodarki Wodnej.
 \url{https://danepubliczne.imgw.pl/}
 }
 \usage{
-data(kody)
+kody
 }
 \description{
 Kody stacji meteorologicznych

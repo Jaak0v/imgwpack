@@ -4,11 +4,11 @@
 #' \url{https://danepubliczne.imgw.pl/}
 #' @format Ramka danych zawiera:
 #' \describe{
-#'  \item{Kod}{Unikatowy kod stacji}
-#'  \item{Stacja}{Nazwa stacji, do które przypisany jest dany kod}
+#'  \item{Kod}{numeric unikatowy kod stacji}
+#'  \item{Stacja}{character, nazwa stacji, do które przypisany jest dany kod}
 #' }
 #'
-#' @usage data(kody)
+#' @usage kody
 #'
 #' @examples
 #' \dontrun{
