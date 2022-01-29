@@ -8,7 +8,7 @@
 #'  \item{Stacja}{character, nazwa stacji, do które przypisany jest dany kod}
 #' }
 #'
-#' @usage kody
+#' @usage data(kody)
 #'
 #' @examples
 #' \dontrun{

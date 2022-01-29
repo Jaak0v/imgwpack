@@ -16,7 +16,7 @@ Instytut Meteorologii i Gospodarki Wodnej.
 \url{https://danepubliczne.imgw.pl/}
 }
 \usage{
-kody
+data(kody)
 }
 \description{
 Kody stacji meteorologicznych
