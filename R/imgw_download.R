@@ -1,3 +1,15 @@
+#' Funkcja pobiera wybrane dane meteorologiczne z serwerów Instytutu Meteorologii i Gospodarki Wodnej
+#'
+#' @param typ character
+#' @param kod character
+#' @param rok integer
+#' @param path character
+#'
+#' @return
+#'
+#' @examples
+#' @export
+
 imgw_download <- function(typ, kod, rok, path) {
 
   if (typ == "miesieczne")     {
