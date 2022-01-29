@@ -5,12 +5,10 @@
 #'  \item{KOD}{Unikatowy kod stacji}
 #'  \item{Nazwa stacji}{Nazwa danej stacji}
 #' }
-#'
-#' @usage
+#' @usage data(Kody)
 #'
 #' @examples
 #' \dontrun{
 #'  Kody
-#'
 #' }
 "Kody"

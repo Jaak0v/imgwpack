@@ -12,7 +12,7 @@ Ramka danych zawiera:
 }
 }
 \usage{
-
+data(Kody)
 }
 \description{
 Kody stacji wykorzystywane do pobierania danych
@@ -20,7 +20,6 @@ Kody stacji wykorzystywane do pobierania danych
 \examples{
 \dontrun{
  Kody
-
 }
 }
 \keyword{datasets}
