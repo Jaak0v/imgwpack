@@ -23,3 +23,12 @@ imgw_import(typ, rok, kod, format, path)
 \description{
 Funckja importuje pobrane dane do środowiska R
 }
+\examples{
+\dontrun{
+Miesieczne_smt <-imgw_import(typ = "miesieczne",
+                             rok = '2012',
+                             kod = '100',
+                             format = 'smt',
+                             path = "")
+}
+}

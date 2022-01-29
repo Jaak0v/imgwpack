@@ -21,3 +21,11 @@ imgw_download(typ, kod, rok, path)
 \description{
 Funkcja pobiera wybrane dane meteorologiczne z serwerów Instytutu Meteorologii i Gospodarki Wodnej
 }
+\examples{
+\dontrun{
+ imgw_download(typ = "dobowe",
+              kod = 105,
+              rok = '2012',
+              path = "")
+}
+}

@@ -26,5 +26,11 @@ imgw_plot(typ, dane, miesiac, zmienna, stacja, dzien)
 Funkcja wizualizuje wybrane dane w postaci wykresu
 }
 \examples{
-
+\dontrun{
+imgw_plot(typ = "miesieczne",
+          dane = '',
+          #miesiac = 5,
+          zmienna = "cisnienie",
+          stacja = "Zakopane")
+}
 }

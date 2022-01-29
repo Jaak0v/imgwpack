@@ -8,6 +8,12 @@
 #' @return
 #'
 #' @examples
+#' \dontrun{
+#'  imgw_download(typ = "dobowe",
+#'               kod = 105,
+#'               rok = '2012',
+#'               path = "")
+#'}
 #' @export
 
 imgw_download <- function(typ, kod, rok, path) {

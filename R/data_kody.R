@@ -7,6 +7,9 @@
 #'  \item{Kod}{Unikatowy kod stacji}
 #'  \item{Stacja}{Nazwa stacji, do które przypisany jest dany kod}
 #' }
+#'
+#' @usage data(kody)
+#'
 #' @examples
 #' \dontrun{
 #'  kody

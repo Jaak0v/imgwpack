@@ -7,9 +7,17 @@
 #' @param path character
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
+#' \dontrun{
+#' Miesieczne_smt <-imgw_import(typ = "miesieczne",
+#'                              rok = '2012',
+#'                              kod = '100',
+#'                              format = 'smt',
+#'                              path = "")
+#'}
+#' @export
 imgw_import <- function(typ, rok, kod, format, path) {
 
   if (typ == "miesieczne")     {

@@ -11,7 +11,14 @@
 #' @export
 #'
 #' @examples
-#'
+#' \dontrun{
+#' imgw_plot(typ = "miesieczne",
+#'           dane = '',
+#'           #miesiac = 5,
+#'           zmienna = "cisnienie",
+#'           stacja = "Zakopane")
+#' }
+#' @examples
 imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
 
   if (typ == "miesieczne")     {
