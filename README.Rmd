@@ -81,24 +81,27 @@ imgw_plot(typ = "terminowe",
 ## Dostępne rodzaje wykresów
 
 
-  *Temperatura
-    zmienna = "temperatura" -> Wykres temperatury
-    
-  *Cisnienie
+1. Temperatura
+```{r, eval = FALSE}
+ zmienna = "temperatura" -> Wykres temperatury
+```   
+2. Cisnienie
+```{r, eval = FALSE}
     zmienna = "cisnienie" -> Wykres cisnienia na poziomie morza i stacji
-    
-  *Wiatr
+```   
+3. Wiatr
+```{r, eval = FALSE}
     zmienna = "predkosc_wiatru" -> Wykres predkosci wiatru
-    
-  *Opad
+```     
+4. Opad
+```{r, eval = FALSE}
     zmienna = "opad" -> Wykres opadu deszczu
-    
-  *Zachmurzenie
+```     
+5. Zachmurzenie
+```{r, eval = FALSE}
     zmienna = "zachmurzenie" -> Wykres zachmurzenia
-    
-  *Monogram
-
-```
+```   
+6. Monogram
 
 
 
