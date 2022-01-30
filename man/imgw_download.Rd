@@ -16,7 +16,7 @@ imgw_download(typ, kod, rok, path)
 \item{path}{character}
 }
 \value{
-
+data
 }
 \description{
 Funkcja pobiera wybrane dane meteorologiczne z serwerów Instytutu Meteorologii i Gospodarki Wodnej
@@ -25,7 +25,7 @@ Funkcja pobiera wybrane dane meteorologiczne z serwerów Instytutu Meteorologii 
 \dontrun{
  imgw_download(typ = "dobowe",
               kod = 105,
-              rok = '2012',
+              rok = 2012,
               path = "")
 }
 }

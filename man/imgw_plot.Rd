@@ -20,14 +20,14 @@ imgw_plot(typ, dane, miesiac, zmienna, stacja, dzien)
 \item{dzien}{integer}
 }
 \value{
-
+plot
 }
 \description{
 Funkcja wizualizuje wybrane dane w postaci wykresu
 }
 \examples{
 \dontrun{
-imgw_plot(typ = "miesieczne",
+imgw_plot(typ = "dobowe",
           dane = '',
           #miesiac = 5,
           zmienna = "cisnienie",

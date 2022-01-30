@@ -7,12 +7,12 @@
 #' @param stacja character
 #' @param dzien integer
 #'
-#' @return
+#' @return plot
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' imgw_plot(typ = "miesieczne",
+#' imgw_plot(typ = "dobowe",
 #'           dane = '',
 #'           #miesiac = 5,
 #'           zmienna = "cisnienie",

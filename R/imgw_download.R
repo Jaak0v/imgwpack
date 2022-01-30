@@ -5,13 +5,13 @@
 #' @param rok integer
 #' @param path character
 #'
-#' @return
+#' @return data
 #'
 #' @examples
 #' \dontrun{
 #'  imgw_download(typ = "dobowe",
 #'               kod = 105,
-#'               rok = '2012',
+#'               rok = 2012,
 #'               path = "")
 #'}
 #' @export

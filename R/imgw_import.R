@@ -6,15 +6,15 @@
 #' @param format character
 #' @param path character
 #'
-#' @return
+#' @return dataframe
 #'
 #'
 #' @examples
 #' \dontrun{
-#' Miesieczne_smt <-imgw_import(typ = "miesieczne",
-#'                              rok = '2012',
-#'                              kod = '100',
-#'                              format = 'smt',
+#' Miesieczne_smt <-imgw_import(typ = "dobowe",
+#'                              rok =  2012,
+#'                              kod = 105,
+#'                              format = "sdt",
 #'                              path = "")
 #'}
 #' @export

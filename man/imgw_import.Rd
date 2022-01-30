@@ -18,17 +18,17 @@ imgw_import(typ, rok, kod, format, path)
 \item{path}{character}
 }
 \value{
-
+dataframe
 }
 \description{
 Funckja importuje pobrane dane do środowiska R
 }
 \examples{
 \dontrun{
-Miesieczne_smt <-imgw_import(typ = "miesieczne",
-                             rok = '2012',
-                             kod = '100',
-                             format = 'smt',
+Miesieczne_smt <-imgw_import(typ = "dobowe",
+                             rok =  2012,
+                             kod = 105,
+                             format = "sdt",
                              path = "")
 }
 }

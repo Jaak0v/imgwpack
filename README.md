@@ -26,27 +26,66 @@ install_git("https://github.com/Jaak0v/imgwpack")
 library(imgwpack)
 ```
 
-## Przyklad zastosowani
+## Zastosowanie:
 
-This is a basic example which shows you how to solve a common problem:
+W celu pobrania danych należy skorzystać z funkcji `imgw_download`
+określając w niej niezbędne parametry:
 
 ``` r
-library(imgwpack)
-## basic example code
+imgw_download(typ = '',
+              kod = '',
+              rok = '',
+              path = '')
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+W celu importu danych należy skorzystać z funkcji `imgw_import`:
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+``` r
+Nazwa <- imgw_import(typ = '',
+                     kod = '',
+                     rok = '',
+                     format = '',
+                     path = '')
+```
 
-You can also embed plots, for example:
+Ze względu na strukturę danych zamieszczonych na serwerach IMGW, w
+przypadku wykorzystania jednej z opisanych powyżej funkcji dla danych
+miesięcznych, nie wykorzystujemy parametru ‘kod’.
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+W celu wizualizacji danych należy skorzystać z funkcji `imgw_download`:
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+imgw_plot(typ = "dobowe",
+          dane = ,
+          miesiac = ,
+          zmienna = "")
+
+imgw_plot(typ = "miesieczne",
+          dane = ,
+          zmienna = "",
+          stacja = "")
+
+imgw_plot(typ = "terminowe",
+          dane = ,
+          miesiac = ,
+          dzien = ,
+          zmienna = "",
+)
+```
+
+## Dostępne rodzaje wykresów
+
+\*Temperatura zmienna = “temperatura” -> Wykres temperatury
+
+\*Cisnienie zmienna = “cisnienie” -> Wykres cisnienia na poziomie morza
+i stacji
+
+\*Wiatr zmienna = “predkosc_wiatru” -> Wykres predkosci wiatru
+
+\*Opad zmienna = “opad” -> Wykres opadu deszczu
+
+\*Zachmurzenie zmienna = “zachmurzenie” -> Wykres zachmurzenia
+
+\*Monogram
+
+\`\`\`
