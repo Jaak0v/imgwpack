@@ -8,9 +8,9 @@
 
 Pakiet imgwpack powstał na potrzeby pracy dyplomowej “Opracowanie
 pakietu R pozyskiwania, przetwarzania i wizualizacji danych
-środowiskowych” . Jego głównym zadaniem jest pobieranie, importowanie
-oraz wizualizacja danych dostępnych na serwerach Instytutu Meteorologii
-i Gospodarki Wodnej (IMGW).
+środowiskowych”. Jego głównym zadaniem jest pobieranie, import oraz
+wizualizacja danych dostępnych na serwerach Instytutu Meteorologii i
+Gospodarki Wodnej (IMGW).
 
 ## Proces instalacji pakietu:
 
@@ -69,8 +69,16 @@ imgw_plot(typ = "terminowe",
           dane = ,
           miesiac = ,
           dzien = ,
-          zmienna = "",
-)
+          zmienna = "")
+```
+
+## Plik z kodami dla poszczególnych stacji
+
+W celu importu listy kodów do środowiska R należy skorzystać z
+polecenia:
+
+``` r
+data(kody)
 ```
 
 ## Dostępne rodzaje wykresów
@@ -78,19 +86,19 @@ imgw_plot(typ = "terminowe",
 1.  Temperatura
 
 ``` r
- zmienna = "temperatura" -> Wykres temperatury
+    zmienna = "temperatura" -> Wykres temperatury
 ```
 
-2.  Cisnienie
+2.  Ciśnienie
 
 ``` r
-    zmienna = "cisnienie" -> Wykres cisnienia na poziomie morza i stacji
+    zmienna = "cisnienie" -> Wykres ciśnienia na poziomie morza i stacji
 ```
 
 3.  Wiatr
 
 ``` r
-    zmienna = "predkosc_wiatru" -> Wykres predkosci wiatru
+    zmienna = "predkosc_wiatru" -> Wykres prędkości wiatru
 ```
 
 4.  Opad
@@ -106,3 +114,27 @@ imgw_plot(typ = "terminowe",
 ```
 
 6.  Monogram
+
+## Przykład zastosowania dla stacji HEL
+
+Poniżej przedstawiono komendy, których użycie spowoduje pobranie, import
+oraz wizualizację danych dla stacji meteorologicznej znajdującej się na
+Helu.
+
+``` r
+imgw_download(typ = "dobowe",
+              kod = '135',
+              rok = '2012',
+              path = "D:/Dane")
+
+Dobowe_HEL <- imgw_import(typ = "dobowe",
+                          rok = '2012',
+                          kod = '135',
+                          format = 'sdt', 
+                          path = "D:/Dane")
+
+imgw_plot(typ = "dobowe",
+          dane = Dobowe_HEL,
+          miesiac = 3,
+          zmienna = "cisnienie")
+```
