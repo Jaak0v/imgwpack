@@ -289,6 +289,80 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
 
     }
 
+    else if (zmienna == "monogram") {
+
+      plot1 <- ggplot(data=dane[dane[,4] == miesiac,],
+                      aes(x=`Dzien`, y=`STD`, group=1)) +
+        geom_line() +
+        geom_point() +
+        geom_text(aes(label = round(`STD`, 1)),
+                  vjust = 0, hjust = 0,
+                  angle = 45,
+                  colour = "red",
+                  show.legend = FALSE) +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24, 28, 31)) +
+        labs(y = "Temperatura [°C]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot2 <- ggplot(data=dane[dane[,4] == miesiac,]) +
+        geom_line(aes(x=`Dzien`, y=`PPPS`, color = "red")) +
+        geom_line(aes(x=`Dzien`, y=`PPPM`, color = "blue")) +
+        geom_point(aes(x=`Dzien`, y=`PPPS`, color = "red")) +
+        geom_point(aes(x=`Dzien`, y=`PPPM`, color = "blue")) +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24, 28, 31)) +
+        scale_color_identity(name = "Poziom odniesienia",
+                             breaks = c("red", "blue"))+
+        labs(y = "Cisnienie [hPa]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot3 <- ggplot(data=dane[dane[,4] == miesiac,]) +
+        geom_line(aes(x=`Dzien`, y=`WODZ`, color = "yellow")) +
+        geom_line(aes(x=`Dzien`, y=`WONO`, color = "black")) +
+        geom_point(aes(x=`Dzien`, y=`WODZ`, color = "yellow")) +
+        geom_point(aes(x=`Dzien`, y=`WONO`, color = "black")) +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24, 28, 31)) +
+        scale_color_identity(name = "Pora dnia",
+                             breaks = c("yellow", "black")) +
+        labs(y = "Opad [mm]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot4 <-  ggplot(data=dane[dane[,4] == miesiac,],
+                       aes(x=`Dzien`, y=`FWS`, group=1)) +
+        geom_line() +
+        geom_point() +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24, 28, 31)) +
+        labs(y = "Predkosc wiatru [m/s]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot5 <- ggplot(data=dane[dane[,4] == miesiac,],
+                      aes(x=`Dzien`, y=`NOS`, group=1)) +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24, 28, 31)) +
+        labs(y = "Zachmurzenie [oktanty]") +
+        geom_line() +
+        geom_area(aes(y=`NOS`),
+                  fill = "lightgray") +
+        geom_text(aes(label = round(`NOS`, 1)),
+                  vjust = 0, hjust = 0,
+                  angle = 45,
+                  colour = "black",
+                  show.legend = FALSE) +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      grid.arrange(plot1, plot2, plot3, plot4, plot5,
+                   ncol=1, nrow=5)
+
+    }
+
     else {
 
       "Wybrano zla zmienna"
@@ -382,6 +456,79 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
         theme(axis.title.x = element_text(color="black", size=10, face="bold"),
               axis.title.y = element_text(color="blue", size=10, face="bold"),
               plot.title = element_text(hjust = 0.5))
+
+    }
+
+    else if (zmienna == "monogram") {
+
+      plot1 <- ggplot(data=dane[dane[,4] == miesiac & dane[,5] == dzien,],
+                      aes(x=`Godzina`, y=`STD`, group=1)) +
+        geom_line() +
+        geom_point() +
+        geom_text(aes(label = round(`STD`, 1)),
+                  vjust = 0, hjust = 0,
+                  angle = 45,
+                  colour = "red",
+                  show.legend = FALSE) +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24)) +
+        labs(y = "Temperatura [°C]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot2 <- ggplot(data=dane[dane[,4] == miesiac & dane[,5] == dzien,]) +
+        geom_line(aes(x=`Godzina`, y=`PPPS`, color = "red")) +
+        geom_line(aes(x=`Godzina`, y=`PPPM`, color = "blue")) +
+        geom_point(aes(x=`Godzina`, y=`PPPS`, color = "red")) +
+        geom_point(aes(x=`Godzina`, y=`PPPM`, color = "blue")) +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24)) +
+        scale_color_identity(name = "Poziom odniesienia",
+                             breaks = c("red", "blue"))+
+        labs(y = "Cisnienie [hPa]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot3 <- ggplot(data=dane[dane[,4] == miesiac & dane[,5] == dzien,],
+                      aes(x=`Godzina`, y=`WO6G`, group=1)) +
+        geom_line() +
+        geom_point() +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24)) +
+        labs(y = "Opad [mm]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot4 <- ggplot(data=dane[dane[,4] == miesiac & dane[,5] == dzien,],
+                      aes(x=`Godzina`, y=`STD`, group=1)) +
+        geom_line() +
+        geom_point() +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24)) +
+        labs(y = "Predkosc wiatru [m/s]") +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      plot5 <- ggplot(data=dane[dane[,4] == miesiac & dane[,5] == dzien,],
+                      aes(x=`Godzina`, y=`NOG`, group=1)) +
+        geom_line() +
+        geom_point() +
+        scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24)) +
+        labs(y = "Zachmurzenie [oktanty]") +
+        geom_line() +
+        geom_area(aes(y=`NOG`),
+                  fill = "lightgray") +
+        geom_text(aes(label = round(`NOG`, 1)),
+                  vjust = 0, hjust = 0,
+                  angle = 45,
+                  colour = "black",
+                  show.legend = FALSE) +
+        theme(axis.title.y = element_text(color="black", size=6, face="bold"),
+              axis.title.x=element_blank(),
+              plot.title = element_text(hjust = 0.5))
+
+      grid.arrange(plot1, plot2, plot3, plot4, plot5,
+                   ncol=1, nrow=5)
 
     }
 
