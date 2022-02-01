@@ -174,6 +174,11 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
         geom_line() +
         geom_area(aes(y=`NOS`),
                   fill = "lightgray") +
+        geom_text(aes(label = round(`NOS`, 1)),
+                  vjust = 0, hjust = 0,
+                  angle = 45,
+                  colour = "black",
+                  show.legend = FALSE) +
         theme(axis.title.y = element_text(color="black", size=6, face="bold"),
               axis.title.x=element_blank(),
               plot.title = element_text(hjust = 0.5))
