@@ -113,10 +113,10 @@ data(kody)
     zmienna = "zachmurzenie" -> Wykres zachmurzenia
 ```
 
-6.  Monogram
+6.  Meteogram
 
 ``` r
-    zmienna = "monogram" -> Skumulowany wykres wszystkich parametrów
+    zmienna = "meteogram" -> Skumulowany wykres wszystkich parametrów
 ```
 
 ## Przykład zastosowania dla stacji HEL
@@ -140,5 +140,5 @@ Dobowe_HEL <- imgw_import(typ = "dobowe",
 imgw_plot(typ = "dobowe",
           dane = Dobowe_HEL,
           miesiac = 3,
-          zmienna = "monogram")
+          zmienna = "meteogram")
 ```

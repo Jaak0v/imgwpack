@@ -114,7 +114,7 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
 
     }
 
-    else if (zmienna == "monogram") {
+    else if (zmienna == "meteogram") {
 
       plot1 <- ggplot(data=dane[dane[,2] == stacja,],
                       aes(x=`Miesiac`, y=`STM`, group=1)) +
@@ -204,9 +204,9 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
         geom_line() +
         geom_point() +
         scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24, 28, 31)) +
-        ggtitle("Miesi??czny rozklad temperatury") +
+        ggtitle("Miesieczny rozklad temperatury") +
         labs(x = "Dzien",
-             y = "Temperatura [??C]") +
+             y = "Temperatura [C]") +
         theme(axis.title.x = element_text(color="black", size=10, face="bold"),
               axis.title.y = element_text(color="red", size=10, face="bold"),
               plot.title = element_text(hjust = 0.5))
@@ -289,7 +289,7 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
 
     }
 
-    else if (zmienna == "monogram") {
+    else if (zmienna == "meteogram") {
 
       plot1 <- ggplot(data=dane[dane[,4] == miesiac,],
                       aes(x=`Dzien`, y=`STD`, group=1)) +
@@ -382,7 +382,7 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
         scale_x_continuous(breaks=c(0, 4, 8, 12, 16, 20, 24)) +
         ggtitle("Godzinowy rozklad temperatury") +
         labs(x = "Godzina",
-             y = "Temperatura [??C]") +
+             y = "Temperatura [C]") +
         theme(axis.title.x = element_text(color="black", size=10, face="bold"),
               axis.title.y = element_text(color="red", size=10, face="bold"),
               plot.title = element_text(hjust = 0.5))
@@ -459,7 +459,7 @@ imgw_plot <- function(typ, dane, miesiac, zmienna, stacja, dzien) {
 
     }
 
-    else if (zmienna == "monogram") {
+    else if (zmienna == "meteogram") {
 
       plot1 <- ggplot(data=dane[dane[,4] == miesiac & dane[,5] == dzien,],
                       aes(x=`Godzina`, y=`STD`, group=1)) +
