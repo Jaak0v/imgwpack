@@ -10,13 +10,19 @@
 #' @examples
 #' \dontrun{
 #'  imgw_download(typ = "dobowe",
-#'               kod = 105,
+#'               kod = '105',
 #'               rok = 2012,
 #'               path = "")
 #'}
 #' @export
 
+
 imgw_download <- function(typ, kod, rok, path) {
+
+  rok <- as.integer(rok)
+
+  if (!is.character(typ) | !is.character(kod) | !is.character(path)) {
+    stopifnot("Wartości argumentów: `typ`,`kod` i `path` muszą być typu character") }
 
   if (typ == "miesieczne")     {
 
@@ -201,7 +207,9 @@ imgw_download <- function(typ, kod, rok, path) {
     }
 
     else {
-      "Wprowadzono nieodpowiedni rok"
+
+      "Wprowadzono nieodpowiedni rok. Funkcja obługuje dane dla lat 1960-2020"
+
     }
 
   }
@@ -408,7 +416,8 @@ imgw_download <- function(typ, kod, rok, path) {
 
     else {
 
-      "Wprowadzono nieodpowiedni rok"
+      "Wprowadzono nieodpowiedni rok. Funkcja obługuje dane dla lat 1960-2020"
+
     }
 
   }
@@ -615,15 +624,18 @@ imgw_download <- function(typ, kod, rok, path) {
 
     else {
 
-      "Wprowadzono nieodpowiedni rok"
+      "Wprowadzono nieodpowiedni rok. Funkcja obługuje dane dla lat 1960-2020"
+
     }
 
   }
 
   else {
 
-    "Wprowadzono zly typ danych"
+    "Wprowadzono zly typ danych. Poprawne typy to: 'dobowe', 'miesieczne' i 'terminowe'"
 
   }
 
 }
+
+

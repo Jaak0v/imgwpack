@@ -2,7 +2,7 @@
 % Please edit documentation in R/imgw_import.R
 \name{imgw_import}
 \alias{imgw_import}
-\title{Funckja importuje pobrane dane do środowiska R}
+\title{Funkcja importuje pobrane dane do srodowiska R}
 \usage{
 imgw_import(typ, rok, kod, format, path)
 }
@@ -21,9 +21,109 @@ imgw_import(typ, rok, kod, format, path)
 dataframe
 }
 \description{
-Funckja importuje pobrane dane do środowiska R
+Funkcja importuje pobrane dane do srodowiska R
 }
+\details{
+
+}
+\section{Dane dobowe}{
+
+\describe{
+\item{Kod}{Indywidualny kod stacji}
+\item{NOS}{Srednie dobowe zachmurzenie ogolne (oktanty)}
+\item{FWS}{Srednia dobowa predkosc wiatru (m/s)}
+\item{STD}{Srednia dobowa temperatura (℃)}
+\item{CPW}{Srednie dobowe cisnienie pary wodnej (hPa)}
+\item{WLGS}{Srednia dobowa wilgotnosc wzgledna (\%)}
+\item{PPPS}{Srednie dobowe cisnienie na poziomie stacji (hPa)}
+\item{PPPM}{Srednie dobowe cisnienie na poziomie morza (hPa)}
+\item{WODZ}{Suma opadu dzien (mm)}
+\item{WONO}{Suma opadu noc (mm)}
+\item{STATUS}{Status "8" = brak pomiaru a Status "9" = brak zjawiska}
+}
+}
+
+\section{Dane miesieczne}{
+
+\describe{
+\item{Kod}{Indywidualny kod stacji}
+\item{NOS}{Srednie miesieczne zachmurzenie ogolne (oktanty)}
+\item{FWS}{Srednia miesieczne predkosc wiatru (m/s)}
+\item{TEMP}{Srednia miesieczna temperatura (℃)}
+\item{CPW}{Srednie miesieczne cisnienie pary wodnej (hPa)}
+\item{WLGS}{Srednia miesieczna wilgotnosc wzgledna (\%)}
+\item{PPPS}{Srednie miesieczne cisnienie na poziomie stacji (hPa)}
+\item{PPPM}{Srednie miesieczne cisnienie na poziomie morza (hPa)}
+\item{WODZ}{Suma opadu dzien (mm)}
+\item{WONO}{Suma opadu noc (mm)}
+\item{STATUS}{Status "8" = brak pomiaru a Status "9" = brak zjawiska}
+}
+}
+
+\section{Dane terminowe}{
+
+\describe{
+\item{HPOD}{Wysokosc podstawy chmur}
+\item{HPON}{Wysokosc podstawy nizszej}
+\item{HPOW}{Wysokosc podstawy wyzszej}
+\item{WPT}{Wysokosc podstawy tekstowy}
+\item{PPn}{Pomiar przyrzadem 1 (nizsza)}
+\item{PPw}{Pomiar przyrzadem 2 (wyzsza)}
+\item{WID}{Widzialnosc (kod)}
+\item{WIDO}{Widzialnosc operatora (m)}
+\item{WIDA}{Widzialnosc automat (m)}
+\item{NOG}{Zachmurzenie ogolne (oktanty)}
+\item{KRWR}{Kierunek wiatru  (°)}
+\item{FWR}{Predkosc wiatru  (m/s) }
+\item{PORW}{Poryw wiatru (m/s)}
+\item{STD}{Temperatura powietrza (°C)}
+\item{TTZW}{Temperatura termometru zwilzonego (°C)}
+\item{WW}{Wskaznik wentylacji (W/N)}
+\item{WL}{Wskaznik lodu (L/W)}
+\item{CPW}{Cisnienie pary wodnej (hPa)}
+\item{WLGW}{Wilgotnosc wzgledna (\%)}
+\item{TPTR}{Temperatura punktu rosy (°C)}
+\item{PPPS}{Cisnienie na poziomie stacji (hPa)}
+\item{PPPM}{Cisnienie na poziomie morza (hPa)}
+\item{Cht}{Charakterystyka tendencji}
+\item{App}{Wartosc tendencji}
+\item{WO6G}{Opad za 6 godzin (mm)}
+\item{ROPT}{Rodzaj opadu za 6 godzin}
+\item{PB}{Pogoda biezaca}
+\item{PU}{Pogoda ubiegla}
+\item{CLCM}{Zachmurzenie niskie (oktanty)}
+\item{CHCL}{Chmury CL}
+\item{CHCLT}{Chmury CL tekstem}
+\item{CHCM}{Chmury CM}
+\item{CHCMT}{Chmury CM tekstem}
+\item{CHCH}{Chmury CH}
+\item{CHCHT}{Chmury CH tekstem}
+\item{SGRN}{Stan gruntu}
+\item{DEFI}{Niedosyt wilgotnosci (hPa)}
+\item{USLN}{Uslonecznienie}
+\item{ROSW}{Wystapienie rosy (0/1)}
+\item{PORK}{Poryw maksymalny za okres WW (m/s)}
+\item{GWP}{Godzina wystapienia porywu}
+\item{MWP}{Minuta wystapienia porywu}
+\item{TG05}{Temperatura gruntu -5 (°C)}
+\item{TMIN}{Temperatura minimalna za 12 godzin (°C)}
+\item{TMAX}{Temperatura maksymalna za 12 godzin (°C)}
+\item{TGMI}{Temperatura minimalna przy gruncie za 12 godzin (°C)}
+\item{RWSN}{Rownowaznik wodny sniegu (mm/cm)}
+\item{PKSN}{Wysokosc pokrywy snieznej (cm)}
+\item{HSS}{Wysokosc swiezo spadlego sniegu (cm)}
+\item{GRSN}{Wysokosc sniegu na poletku (cm)}
+\item{GS}{Gatunek sniegu}
+\item{UPK}{Uksztaltowanie pokrywy}
+\item{HPRO}{Wysokosc probki (cm)}
+\item{CIPR}{Ciezar probki (g)}
+\item{STATUS}{Status "8" = brak pomiaru a Status "9" = brak zjawiska}
+}
+}
+
 \examples{
+
+
 \dontrun{
 Miesieczne_smt <-imgw_import(typ = "dobowe",
                              rok =  2012,

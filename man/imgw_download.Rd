@@ -24,7 +24,7 @@ Funkcja pobiera wybrane dane meteorologiczne z serwerów Instytutu Meteorologii 
 \examples{
 \dontrun{
  imgw_download(typ = "dobowe",
-              kod = 105,
+              kod = '105',
               rok = 2012,
               path = "")
 }
