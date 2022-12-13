@@ -3,6 +3,7 @@
 export(imgw_download)
 export(imgw_import)
 export(imgw_plot)
+import(ggh4x)
 import(ggplot2)
 import(gridExtra)
 import(readxl)

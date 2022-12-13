@@ -4,7 +4,6 @@
 #' @param kod character
 #' @param rok integer
 #' @param path character
-#'
 #' @return data
 #'
 #' @examples

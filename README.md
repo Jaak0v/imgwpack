@@ -52,7 +52,7 @@ Ze względu na strukturę danych zamieszczonych na serwerach IMGW, w
 przypadku wykorzystania jednej z opisanych powyżej funkcji dla danych
 miesięcznych, nie wykorzystujemy parametru ‘kod’.
 
-W celu wizualizacji danych należy skorzystać z funkcji `imgw_download`:
+W celu wizualizacji danych należy skorzystać z funkcji `imgw_plot`:
 
 ``` r
 imgw_plot(typ = "dobowe",
@@ -127,18 +127,18 @@ Helu.
 
 ``` r
 imgw_download(typ = "dobowe",
-              kod = '135',
-              rok = '2012',
-              path = "D:/Dane")
+              kod = "625",
+              rok = 2011,
+              path = "D:/DaneR")
 
-Dobowe_HEL <- imgw_import(typ = "dobowe",
-                          rok = '2012',
-                          kod = '135',
-                          format = 'sdt', 
-                          path = "D:/Dane")
+Dobowe_Zakopane <- imgw_import(typ = "dobowe",
+                               rok = 2011,
+                               kod = '625',
+                               format = 'sdt',
+                               path = "D:/DaneR")
 
 imgw_plot(typ = "dobowe",
-          dane = Dobowe_HEL,
-          miesiac = 3,
+          dane = Dobowe_Zakopane,
+          miesiac = 1,
           zmienna = "meteogram")
 ```
